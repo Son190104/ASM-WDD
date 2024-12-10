@@ -1,0 +1,342 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid #eaeaea;
+    
+    
+}
+.header .logo a{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+.search-bar {
+    display: flex;
+    align-items: right;
+    border-bottom: 1px solid #ddd;
+    
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.search-bar i {
+    margin-right: 30px;
+    color: black;
+    
+}
+.header .icons i {
+    margin-left: 15px;
+    font-size: 18px;
+    
+}
+
+.breadcrumb {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #666;
+}
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.main-content {
+    padding: 20px;
+    
+}
+.main-content h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.filters .filter-group {
+    display: flex;
+    align-items: center;
+}
+.filters .filter-group span {
+    margin-right: 10px;
+    font-weight: 500;
+}
+.filters .filter-group select {
+    padding: 5px 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+
+.product-item {
+    text-align: center;
+    width: 23%;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+    padding: 1%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.product-item img {
+    width: 105%;
+    border-radius: 4px;
+    height: auto;
+}
+/* Ẩn ảnh thứ hai mặc định */
+.product-item img + img {
+    display: none;
+}
+
+/* Khi di chuột vào sản phẩm, ảnh thứ hai thay thế ảnh đầu tiên */
+.product-item:hover img {
+    display: none;
+}
+
+.product-item:hover img + img {
+    display: block;
+}
+.product-item .product-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.product-item .product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+div img{
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    opacity: 0; /* Ẩn nút mặc định */
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+.product-item:hover .product-buttons {
+    opacity: 1; /* Hiển thị nút khi di chuột vào sản phẩm */
+}
+.product-buttons button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+    font-size: 15px;
+}
+.product-buttons button:hover {
+    background-color: #333; /* Thay đổi màu khi di chuột vào nút */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal img {
+    width: 50%;
+    height: auto;
+}
+.modal h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.modal p {
+    color: #555;
+}
+.modal select, .modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+.modal button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+.modal button:hover {
+    background-color: #555;
+}
+
+
+.cart {
+    position: relative;
+}
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 73px;
+    width: 300px;
+    height: auto;
+    overflow: auto;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px;
+}
+.cart-modal h3 {
+    margin-top: 0;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cart-item img {
+    width: 50px;
+    height: auto;
+}
+.cart-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.cart-item button:hover {
+    background-color: darkred;
+}
+.cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+.checkout-button{
+    padding: 10px 30px;
+    position: relative;
+    float: left;
+    background: #000;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 70px 36px;
+    top: 50px;
+}
+
+
+/* CSS cho phần footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+.footer-column {
+    width: 23%;
+}
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.footer-column p, .footer-column a {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    text-decoration: none;
+}
+.footer-column a:hover {
+    text-decoration: underline;
+}
+.footer-column .contact-info {
+    margin-top: 10px;
+}
+.footer-column .contact-info p {
+    margin: 5px 0;
+}
+.footer-column .social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.footer-column .social-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #333;
+}
+.footer-column .social-icons i:hover {
+    color: #007bff;
+}

@@ -1,0 +1,439 @@
+/* CSS cho phần header */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
+   
+}
+.navbar-left{
+    width: 90%;
+    height: 6vh;
+    display: flex;
+    background-color: red0;
+}
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+.navbar-left a, .navbar-right a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+}
+.navbar-left a:hover, .navbar-right a:hover {
+    color: #555;
+}
+.navbar-left a:first-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+.navbar, .navbar-right{
+    margin-left: auto;
+}
+.search-bar {
+    display: flex;
+    align-items: right;
+    border-bottom: 1px solid #ddd;
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.search-bar i {
+    margin-right: 50px;
+    
+}
+
+#Banner {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-repeat: no-repeat;
+    background-position-y: -90% ;
+    background-size: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 20px;
+    width: 600px;
+    border: 1px solid #ddd;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px 0;
+    color: black;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown-content .images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.dropdown-content .images img {
+    width: 30%;
+    height: auto;
+}
+.navbar-left a:hover .dropdown-content {
+    display: block;
+}
+.navbar-left .dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown {
+    position: relative;
+}
+
+
+/* CSS Cho phần main */
+.content {
+    text-align: center;
+    padding: 50px 60px;
+}
+.content h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+.products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    text-align: center; 
+}
+.product {
+    width: 23%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    display: block;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Ẩn ảnh thứ hai mặc định */
+.product img + img {
+    display: none;
+}
+
+/* Khi di chuột vào sản phẩm, ảnh thứ hai thay thế ảnh đầu tiên */
+.product:hover img {
+    display: none;
+}
+
+.product:hover img + img {
+    display: block;
+}
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.product p {
+    color: #555;
+}
+
+
+
+
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    opacity: 0; /* Ẩn nút mặc định */
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.product:hover .product-buttons {
+    opacity: 1; /* Hiển thị nút khi di chuột vào sản phẩm */
+}
+
+.product-buttons button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+.product-buttons button:hover {
+    background-color: #333; /* Thay đổi màu khi di chuột vào nút */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal img {
+    width: 50%;
+    height: auto;
+}
+.modal h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.modal p {
+    color: #555;
+}
+.modal select, .modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+.modal button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+.modal button:hover {
+    background-color: #555;
+}
+
+
+.cart {
+    position: relative;
+}
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 73px;
+    width: 300px;
+    height: auto;
+    overflow: auto;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px;
+}
+.cart-modal h3 {
+    margin-top: 0;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cart-item img {
+    width: 50px;
+    height: auto;
+}
+.cart-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.cart-item button:hover {
+    background-color: darkred;
+}
+.cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+.checkout-button{
+    padding: 10px 30px;
+    position: relative;
+    float: left;
+    background: #000;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 70px 36px;
+    top: 50px;
+}
+
+
+.banner img{
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position-y: -50% ;
+    background-size: cover;
+
+}
+
+/* css cho phần container */
+
+.container {
+    width: 95%;
+    margin: 73px auto;
+    text-align: center;
+
+}
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 40px 0;
+}
+.lookbook {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.lookbook-item {
+    width: 23%;
+    margin-bottom: 25px;
+    
+}
+.lookbook-item img {
+    width: 311px;
+    
+    height: 242px;
+}
+.lookbook-caption {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* CSS cho phần footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+.footer-column {
+    width: 23%;
+}
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.footer-column p, .footer-column a {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    text-decoration: none;
+}
+.footer-column a:hover {
+    text-decoration: underline;
+}
+.footer-column .contact-info {
+    margin-top: 10px;
+}
+.footer-column .contact-info p {
+    margin: 5px 0;
+}
+.footer-column .social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.footer-column .social-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #333;
+}
+.footer-column .social-icons i:hover {
+    color: #007bff;
+}

@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid #eaeaea;
+    
+    
+}
+.header .logo a{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+.search-bar {
+    display: flex;
+    align-items: right;
+    border-bottom: 1px solid #ddd;
+    
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.search-bar i {
+    margin-right: 30px;
+    color: black;
+    
+}
+.header .icons i {
+    margin-left: 15px;
+    font-size: 18px;
+    
+}
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #333;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.content {
+    padding: 20px;
+}
+.content h1 {
+    color: black;
+    font-size: 24px;
+}
+.content .date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.content .date i {
+    margin-right: 5px;
+}
+.content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+.content ul li {
+    margin-bottom: 10px;
+}
+.content ul li i {
+    color: black;
+    margin-right: 3px;
+}
+.content ul li b {
+    font-weight: bold;
+}
+.content ul li ul {
+    list-style: none;
+    padding-left: 20px;
+}
+.content ul li ul li {
+    margin-bottom: 5px;
+}

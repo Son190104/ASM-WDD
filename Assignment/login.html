@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="">KRIK </a>
+                <div class="dropdown">
+                    <a href="">MEN'S SHIRTS</a>
+                    
+                </div>
+
+                <div class="">
+                    <a href="">MEN'S PANTS</a>
+                   
+                </div>
+
+                <div class="">
+                    <a href="">ACCESSORIES</a>
+                   
+
+                </div>
+               
+                <div class="navbar-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search">
+                        </i>
+                        <input placeholder="Search" type="text" />
+                    </div>
+                    <a href="#" onclick="openLoginModal()"><i class="fas fa-user"></i></a>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-heart">
+                        </i>
+                    </a>
+                    <div class="cart">
+                        <a href="#" onclick="toggleCartModal()">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+    </header>
+    <Main>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            
+            <div class="form-container">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <a href="#" onclick="openRegisterModal()">Don't have an account? Sign up</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            
+            <div class="form-container">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <input type="text" id="registerName" placeholder="Name" required>
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <button type="submit">Register</button>
+                    <a href="#" onclick="closeRegisterModal(); openLoginModal();">Already have an account? Sign in</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="loginscript.js"></script>
+    </Main>
+    
+    <!-- banner -->
+    <div class="row">
+        <div class="banner col-12">
+            <img src="https://pos.nvncdn.com/be3159-662/bn/20240921_h3xCoY0r.gif" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-column">
+                <h3>
+                    ABOUT US
+                </h3>
+                <p>
+                    <strong>
+                        KRIK Vietnam Co., Ltd.
+                    </strong>
+                </p>
+                <p>
+                    Address: No. 344 Cau Giay, Dich Vong Ward, Cau Giay District, Hanoi City
+                </p>
+                <p>
+                    Business Registration Number: 0108901419 issued by the Hanoi Department of Planning and Investment on September 17, 2019
+                </p>
+                <p>
+                    Phone: 0379.058.911
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    POLICIES AND REGULATIONS
+                </h3>
+                <p>
+                    <a href="cachdathang.html">
+                        How to place an order
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Membership policy
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Delivery policy
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Return policy
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Privacy policy
+                    </a>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    STORE LOCATIONS
+                </h3>
+                <p>
+                    <strong>
+                        ▶ STORE NO. 15
+                    </strong>
+                </p>
+                <p>
+                    BIG C Thang Long, 222 Tran Duy Hung, Trung Hoa Ward, Cau Giay District, Hanoi
+                </p>
+                <p>
+                    Tel: 0379.058.911
+                </p>
+                <p>
+                    <strong>
+                        ▶ STORE NO. 14
+                    </strong>
+                </p>
+                <p>
+                    84 Pham Minh Duc, May To Ward, Ngo Quyen District, Hai Phong City
+                </p>
+                <p>
+                    Tel: 0379.058.911
+                </p>
+                <p>
+                    <strong>
+                        <a href="">▶ VIEW ALL STORE LOCATIONS</a>
+                    </strong>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    CONNECT WITH US
+                </h3>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f">
+                    </i>
+                    <i class="fas fa-shopping-bag">
+                    </i>
+                    <i class="fas fa-comment-dots">
+                    </i>
+                </div>
+                <div class="contact-info">
+                    <p>
+                        ORDER INQUIRIES (08:30 - 22:00)
+                    </p>
+                    <p>
+                        <strong>
+                            0379.058.911
+                        </strong>
+                    </p>
+                    <p>
+                        FEEDBACK & COMPLAINTS (08:30 - 22:00)
+                    </p>
+                    <p>
+                        <strong>
+                            0379.058.911
+                        </strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

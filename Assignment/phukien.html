@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="phukien.css">
+    
+
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logo">
+            <a href="Homepage.html">KRIK</a></div>
+        <div class="search-bar">
+            
+            <div class="search-bar">
+                <i class="fas fa-search">
+                </i>
+                <input placeholder="Search" type="text" />
+            </div>
+                <a href="#">
+                    <i class="fas fa-user">
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-heart">
+                    </i>
+                </a>
+                <div class="cart">
+                    <a href="#" onclick="toggleCartModal()">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <div class="cart-count" id="cartCount">0</div>
+                </div>
+            
+        </div>
+        
+    </div>
+    <div class="breadcrumb">
+        <a href="Homepage.html">Home</a> | <a href="#">ACCESSORIES</a>
+    </div>
+    <div class="main-content">
+        <h1>ACCESSORIES</h1>
+        <div class="filters">
+            <div class="filter-group">
+                <span>FILTERS</span>
+                <select id="colorFilter">
+                    <option value="">Color</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="white">White</option>
+                    <option value="blue">Blue</option>
+                    <option value="gray">Gray</option>
+                    <option value="Beige">Beige</option>
+                    <option value="moss">Moss</option>
+                    <option value="brown">Brown</option>
+                    <option value="turquoise">Turquoise</option>
+                    
+                </select>
+                <select id="sizeFilter">
+                    <option value="">Size</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                </select>
+                <select id="priceFilter">
+                    <option value="">Price Range</option>
+                    <option value="0-300000">0 - 300,000₫</option>
+                    <option value="300000-500000">300,000₫ - 500,000₫</option>
+                    <option value="500000-700000">500,000₫ - 700,000₫</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <span>Sort by:</span>
+                <select id="sortFilter">
+                    <option value="newest">Newest</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+        <div class="product-list" id="productList">
+            <div class="product-item" data-color="black" data-size="" data-price="389000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240611_Zu6hIEGNWQ.jpeg" alt="" width="300" height="400"/>
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240611_jZhPmJ7OBx.jpeg" alt="">
+                <div class="product-name">Belt 003</div>
+                <div class="product-price">389,000₫</div>  
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Belt 003', 'https://pos.nvncdn.com/be3159-662/ps/20240611_jZhPmJ7OBx.jpeg', 'In stock', '389,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            <div class="product-item" data-color="black" data-size="" data-price="339000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240611_6QTngML5Fe.jpeg" alt="" width="300" height="400"/>
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240611_DzmVELN7cc.jpeg" alt="">
+                <div class="product-name">Belt 002</div>
+                <div class="product-price">339,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Belt 002', 'https://pos.nvncdn.com/be3159-662/ps/20240611_DzmVELN7cc.jpeg', 'In stock', '339,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            <div class="product-item" data-color="black" data-size="m" data-price="419000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240611_94oXAP5tw9.jpeg" alt="" width="300" height="400"/>
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240611_hiQkwVmMP6.jpeg" alt="">
+                <div class="product-name">Belt 001</div>
+                <div class="product-price">419,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Belt 001', 'https://pos.nvncdn.com/be3159-662/ps/20240611_hiQkwVmMP6.jpeg', 'In stock', '419,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            <div class="product-item" data-color="black" data-size="40" data-price="979000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240410_BPmwguNNeF.jpeg" alt="" width="300" height="400"/>
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240410_jAXwOVOfWm.jpeg" alt="">
+                <div class="product-name">Chelsea Boots 0068</div>
+                <div class="product-price">979,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Chelsea Boots 0068', 'https://pos.nvncdn.com/be3159-662/ps/20240410_jAXwOVOfWm.jpeg', 'In stock', '979,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            <div class="product-item" data-color="Beige" data-size="39" data-price="729000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240124_xctMA8Kpqb.png" alt="" width="300" height="400"/>
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240124_yv6baEHnuz.png" alt="">
+                <div class="product-name">Sneakers 0056</div>
+                <div class="product-price">729,000₫</div>  
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Sneakers 0056', 'https://pos.nvncdn.com/be3159-662/ps/20240124_yv6baEHnuz.png', 'In stock', '729,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            <div class="product-item" data-color="white" data-size="39" data-price="719000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20241021_hvUtbUK86y.jpeg" alt="" width="300" height="400"/>
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20241021_CaQbPyMbcY.jpeg" alt="">
+                <div class="product-name">Sneakers 0066</div>
+                <div class="product-price">719,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Sneakers 0066', 'https://pos.nvncdn.com/be3159-662/ps/20241021_CaQbPyMbcY.jpeg', 'In stock', '719,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            <div class="product-item" data-color="black" data-size="" data-price="639000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240124_UJmcVXCRzP.png" alt="" width="300" height="400"/>
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240124_eedJeYBTZB.png" alt="">
+                <div class="product-name">Leather Backpack 0063</div>
+                <div class="product-price">639,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Leather Backpack 0063', 'https://pos.nvncdn.com/be3159-662/ps/20240124_eedJeYBTZB.png', 'In stock', '639,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product-item" data-color="black" data-size="" data-price="579000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240124_ZCQKCDH3e3.png" alt="" width="300" height="400" />
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240124_xyH3oO3S9R.png" alt="">
+                <div class="product-name">Leather Backpack 0061</div>
+                <div class="product-price">679,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Leather Backpack 0061', 'https://pos.nvncdn.com/be3159-662/ps/20240124_xyH3oO3S9R.png', 'In Stock', '679,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product-item" data-color="black" data-size="" data-price="549000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240124_MUKi2Q1PPs.png" alt="" width="300" height="400" />
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240124_wVr16V0SUr.png" alt="">
+                <div class="product-name">Leather Crossbody Bag 0064</div>
+                <div class="product-price">549,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Leather Crossbody Bag 0064', 'https://pos.nvncdn.com/be3159-662/ps/20240124_wVr16V0SUr.png', 'In Stock', '549,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product-item" data-color="black" data-size="41" data-price="819000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240105_EQEvRdn9TG.png" alt="" width="300" height="400" />
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20240105_3Ee3xYtcbV.png" alt="">
+                <div class="product-name">Derby Shoes 0059</div>
+                <div class="product-price">819,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Derby Shoes 0059', 'https://pos.nvncdn.com/be3159-662/ps/20240105_3Ee3xYtcbV.png', 'In Stock', '819,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product-item" data-color="brown" data-size="42" data-price="899000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20231205_omEKP4gDG5.jpeg" alt="" width="300" height="400" />
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20231205_ZLYvpi7qLJ.jpeg" alt="">
+                <div class="product-name">Oxford Shoes 0052</div>
+                <div class="product-price">899,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Oxford Shoes 0052', 'https://pos.nvncdn.com/be3159-662/ps/20231205_ZLYvpi7qLJ.jpeg', 'In Stock', '899,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product-item" data-color="black" data-size="41" data-price="899000">
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20230929_dmcPmKKxw5.jpeg" alt="" width="300" height="400" />
+                <img src="https://pos.nvncdn.com/be3159-662/ps/20230929_E4GaRLd1cN.jpeg" alt="">
+                <div class="product-name">Sneaker Shoes 0030</div>
+                <div class="product-price">899,000₫</div>
+                <div class="product-buttons">
+                    <button
+                        onclick="openModal('Sneaker Shoes 0030', 'https://pos.nvncdn.com/be3159-662/ps/20230929_E4GaRLd1cN.jpeg', 'In Stock', '899,000₫')">
+                        Buy Now</button>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <script src="javascript.js"></script>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">
+                ×
+            </span>
+            <img alt="Product Image" id="modalImage" src="" />
+            <h3 id="modalTitle">
+                Product Title
+            </h3>
+            <p id="modalStatus">
+                Status
+            </p>
+            <p id="modalPrice">
+                Price
+            </p>
+            <select id="modalColor">
+                <option value="">
+                    Select color
+                </option>
+                <option value="beige">
+                    Beige
+                </option>
+                <option value="blue">
+                    Blue
+                </option>
+                <option value="brown">
+                    Brown
+                </option>
+                <option value="black">
+                    Black
+                </option>
+                <option value="white">
+                    White
+                </option>
+            </select>
+            <select id="modalSize">
+                <option value="">
+                    Select size
+                </option>
+                <option value="S">
+                    S
+                </option>
+                <option value="M">
+                    M
+                </option>
+                <option value="L">
+                    L
+                </option>
+                <option value="XL">
+                    XL
+                </option>
+            </select>
+            <button onclick="addToCart()">
+                Own It Now
+            </button>
+        </div>
+    </div>
+    <div class="cart-modal" id="cartModal">
+        <button class="close-cart" onclick="toggleCartModal()">&times;</button>
+        <h3>
+            Shopping Cart
+        </h3>
+        
+        <div id="cartItems">
+        </div>
+        <div class="cart-total" id="cartTotal">
+            Total estimated amount: 0 VND
+        </div>
+        <button class="checkout-button" onclick="proceedToCheckout()">Place order</button>
+    </div>
+    
+
+    <div>
+        <img src="https://pos.nvncdn.com/be3159-662/bn/20240921_h3xCoY0r.gif" alt="">
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-column">
+                <h3>
+                    ABOUT US
+                </h3>
+                <p>
+                    <strong>
+                        KRIK Vietnam Co., Ltd.
+                    </strong>
+                </p>
+                <p>
+                    Address: No. 344 Cau Giay, Dich Vong Ward, Cau Giay District, Hanoi City
+                </p>
+                <p>
+                    Business Registration Number: 0108901419 issued by the Hanoi Department of Planning and Investment on September 17, 2019
+                </p>
+                <p>
+                    Phone: 0379.058.911
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    POLICIES AND REGULATIONS
+                </h3>
+                <p>
+                    <a href="cachdathang.html">
+                        How to place an order
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Membership policy
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Delivery policy
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Return policy
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Privacy policy
+                    </a>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    STORE LOCATIONS
+                </h3>
+                <p>
+                    <strong>
+                        ▶ STORE NO. 15
+                    </strong>
+                </p>
+                <p>
+                    BIG C Thang Long, 222 Tran Duy Hung, Trung Hoa Ward, Cau Giay District, Hanoi
+                </p>
+                <p>
+                    Tel: 0379.058.911
+                </p>
+                <p>
+                    <strong>
+                        ▶ STORE NO. 14
+                    </strong>
+                </p>
+                <p>
+                    84 Pham Minh Duc, May To Ward, Ngo Quyen District, Hai Phong City
+                </p>
+                <p>
+                    Tel: 0379.058.911
+                </p>
+                <p>
+                    <strong>
+                        <a href="">▶ VIEW ALL STORE LOCATIONS</a>
+                    </strong>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    CONNECT WITH US
+                </h3>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f">
+                    </i>
+                    <i class="fas fa-shopping-bag">
+                    </i>
+                    <i class="fas fa-comment-dots">
+                    </i>
+                </div>
+                <div class="contact-info">
+                    <p>
+                        ORDER INQUIRIES (08:30 - 22:00)
+                    </p>
+                    <p>
+                        <strong>
+                            0379.058.911
+                        </strong>
+                    </p>
+                    <p>
+                        FEEDBACK & COMPLAINTS (08:30 - 22:00)
+                    </p>
+                    <p>
+                        <strong>
+                            0379.058.911
+                        </strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
